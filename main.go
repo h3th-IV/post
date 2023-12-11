@@ -20,14 +20,5 @@ func main() {
 	}
 
 	defer dataBase.CloseDB()
-	if err := dataBase.CreateTable(); err != nil {
-		log.Fatal(err)
-	}
-
-	if err := dataBase.InputRecords("Invicible", "MJ"); err != nil {
-		log.Fatal(err)
-	}
-	if err := dataBase.InputRecords("King's Disease", "Nas"); err != nil {
-		log.Fatal(err)
-	}
+	//perfom CRUD
 }

@@ -14,7 +14,7 @@
         - GRANT ALL PRIVILEGES ON DATABASE mydatabase TO newUser;
     
     
-    - environment variables will look this:
+    - environment variables will look like this:
         - PG_HOST=localhost
         - PG_PORT=5432
         - PG_USER=newUser
