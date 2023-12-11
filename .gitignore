@@ -1,0 +1,12 @@
+# Ignore compiled binaries and libraries
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Ignore log files and directories
+logs/
+*.log
+
+# Ignore sensitive configuration files
+.env
