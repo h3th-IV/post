@@ -11,14 +11,15 @@ import (
 
 var DB *sql.DB
 
+// init the dB and try connecting
 func InitDB() error {
 	dataSrcName := fmt.Sprintf("host=%s port=%s user=%s password=%s dbname=%s sslmode=disable",
 		os.Getenv("PG_HOST"), os.Getenv("PG_PORT"), os.Getenv("PG_USER"),
 		os.Getenv("PG_PASSWORD"), os.Getenv("PG_DBNAME"))
 
 	//log.Printf("Data Source Name: %s", dataSrcName) //dBugging
-
-	DB, err := sql.Open("postgres", dataSrcName)
+	var err error
+	DB, err = sql.Open("postgres", dataSrcName)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -28,3 +29,5 @@ func InitDB() error {
 func CloseDB() {
 	DB.Close()
 }
+
+//secure socket noe used since in Development env
