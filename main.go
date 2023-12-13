@@ -21,4 +21,9 @@ func main() {
 
 	defer dataBase.CloseDB()
 	//perfom CRUD
+	err = dataBase.CreateTable()
+	if err != nil {
+		log.Fatal(err)
+	}
+
 }
