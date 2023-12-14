@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	"github.com/h3th-IV/postman/dataBase"
+	"github.com/h3th-IV/postman/database"
 	"github.com/joho/godotenv"
 )
 
@@ -14,12 +14,17 @@ func main() {
 		log.Fatalf("Error loading .env file: %v", err)
 	}
 
-	err = dataBase.InitDB()
+	err = database.InitDB()
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	defer dataBase.CloseDB()
+	defer database.CloseDB()
 	//perfom CRUD
+	err = database.InputRecords("Heavy", "Drake")
+	if err != nil {
+		log.Println(err)
+	}
 
+	// dataBase.UpdateRecords("New Album", "Nas")
 }

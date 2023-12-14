@@ -1,4 +1,4 @@
-package dataBase
+package database
 
 type Album struct {
 	albumTitle string

@@ -3,3 +3,8 @@ King's Disease        | Nas
 Father                | Uno Hype
 Heaven Over Hollywood | Hi-Rez
 Pain Paints Paintings | DaX
+
+
+
+
+INSERT INTO album (album_title, artist_name) VALUES ("Haevy", "Drake");
