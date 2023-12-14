@@ -9,6 +9,12 @@ import (
 	_ "github.com/lib/pq"
 )
 
+// Init dB
+// Close dB
+// Ping dB
+// Create Tables
+// Write Queries
+
 var DB *sql.DB
 
 // init the dB and try connecting
@@ -30,4 +36,4 @@ func CloseDB() {
 	DB.Close()
 }
 
-//secure socket noe used since in Development env
+//secure socket not used since in Development env
